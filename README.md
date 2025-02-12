@@ -16,18 +16,20 @@ Ce projet est un **portfolio interactif** développé dans le cadre de l'épreuv
    git clone https://XXXX
 
 2. Commandes GIT utilisées :
-  git add .                 #Ajoute tous les fichiers au repositorie GitHub
 
-  git status                #Voir fichier(s) ajouté(s)
+- git add .                 #Ajoute tous les fichiers au repositorie GitHub
 
-  git commit -m "message"   #MAJ des saves sur le pc
+- git status                #Voir fichier(s) ajouté(s)
 
-  git push                  #Confirmer commande
+-  git commit -m "message"   #MAJ des saves sur le pc
 
-  git checkout main         #passer sur la branche main en cas de problèmes
+-  git push                  #Confirmer commande
+
+-  git checkout main         #passer sur la branche main en cas de problèmes
 
 
-<!-- =========================================================
+![Portfolio](
+  <!-- =========================================================
   * Portfolio by
   *   _           _    _                              ___    
   *  /_\   _ __  | |_ | |__    ___   _ __   _   _    / _ \   
@@ -35,4 +37,4 @@ Ce projet est un **portfolio interactif** développé dans le cadre de l'épreuv
   */  _  \| | | || |_ | | | || (_) || | | || |_| | / ___/  _ 
   *\_/ \_/|_| |_| \__||_| |_| \___/ |_| |_| \__, | \/     (_)
   *                                         |___/            
-  ============================================================ -->
+  ============================================================ -->)
