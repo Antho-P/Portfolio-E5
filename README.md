@@ -29,7 +29,7 @@ Ce projet est un **portfolio interactif** développé dans le cadre de l'épreuv
 
 - git checkout main         #passer sur la branche main en cas de problèmes
 
-### Portfolio by
+### 🧑‍💻 Portfolio by
 
   ```bash
  ===========================================================
