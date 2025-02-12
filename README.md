@@ -17,7 +17,9 @@ Ce projet est un **portfolio interactif** développé dans le cadre de l'épreuv
 
 2. Commandes GIT utilisées :
 
-- git add .                 #Ajoute tous les fichiers au repositorie GitHub
+- git add .                 #Ajoute tous les fichiers au dépôt GitHub
+
+- git pull                  #Récupère tous les fichiers du dépôt GitHub
 
 - git status                #Voir fichier(s) ajouté(s)
 
