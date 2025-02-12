@@ -21,20 +21,20 @@ Ce projet est un **portfolio interactif** développé dans le cadre de l'épreuv
 
 - git status                #Voir fichier(s) ajouté(s)
 
--  git commit -m "message"   #MAJ des saves sur le pc
+- git commit -m "message"   #MAJ des saves sur le pc
 
--  git push                  #Confirmer commande
+- git push                  #Confirmer commande
 
--  git checkout main         #passer sur la branche main en cas de problèmes
+- git checkout main         #passer sur la branche main en cas de problèmes
 
 
 
-==========================================================
-Portfolio by
-   _           _    _                              ___    
-  /_\   _ __  | |_ | |__    ___   _ __   _   _    / _ \   
- //_\\ | '_ \ | __|| '_ \  / _ \ | '_ \ | | | |  / /_)/   
-/  _  \| | | || |_ | | | || (_) || | | || |_| | / ___/  _ 
-\_/ \_/|_| |_| \__||_| |_| \___/ |_| |_| \__, | \/     (_)
-                                         |___/            
-=========================================================== 
+  <!-- =========================================================
+  * Portfolio by
+  *   _           _    _                              ___    
+  *  /_\   _ __  | |_ | |__    ___   _ __   _   _    / _ \   
+  * //_\\ | '_ \ | __|| '_ \  / _ \ | '_ \ | | | |  / /_)/   
+  */  _  \| | | || |_ | | | || (_) || | | || |_| | / ___/  _ 
+  *\_/ \_/|_| |_| \__||_| |_| \___/ |_| |_| \__, | \/     (_)
+  *                                         |___/            
+  ============================================================ -->
