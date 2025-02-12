@@ -16,7 +16,7 @@ Ce projet est un **portfolio interactif** développé dans le cadre de l'épreuv
    git clone https://XXXX
 
 2. Commandes GIT utilisées :
-
+  ```bash
 - git add .                 #Ajoute tous les fichiers au dépôt GitHub
 
 - git pull                  #Récupère tous les fichiers du dépôt GitHub
