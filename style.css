@@ -119,7 +119,7 @@ nav ul li a.active {
 /* Style des sections */
 .section {
     padding: 100px 20px;
-    height: 100vh; /* Chaque section prendra 100% de la hauteur de la fenêtre */
+    height: 200vh; /* Chaque section prendra 200% de la hauteur de la fenêtre */
     background-color: #f4f4f4; /* Couleur d'arrière-plan pour mieux les distinguer */
     color: #333;
 }
