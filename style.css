@@ -26,12 +26,12 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 60px;
 }
 
 nav .logo h1 {
     color: #fff;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
 }
 
@@ -136,4 +136,53 @@ nav ul li a.active {
 .section p {
     font-size: 18px;
     line-height: 1.6;
+}
+
+/* Style de la section Contact */
+.contact-section {
+    background-color: #e0e0e0; /* Harmonisé avec les autres sections */
+    padding: 100px 20px;
+    text-align: center;
+}
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.input-group label {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+}
+.btn-contact {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    background: #00eaff; /* Aligné avec les couleurs du site */
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.btn-contact:hover {
+    background: #0077b6;
 }
