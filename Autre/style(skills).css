@@ -1,0 +1,49 @@
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.marquee {
+    display: flex;
+    width: fit-content;
+    animation: scroll 10s linear infinite;
+}
+
+.marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* ESPACEMENT UNIFORME */
+    flex-shrink: 0;
+}
+
+.marquee-content img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 20px; /* AJOUTE UNE MARGE POUR COMPENSER */
+}
+
+.marquee-content img:hover {
+    transform: scale(1.3);
+}
+
+/* Animation fluide */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .marquee-content img {
+        width: 80px;
+        margin-right: 15px; /* Ajuste l'espacement sur mobile */
+    }
+}
