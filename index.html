@@ -40,22 +40,26 @@
         <h2>Mon Portfolio</h2>
         <p>Contenu du portfolio...</p>
     </section>
-
+    
+<!-- Menu du Profil -->
     <section id="about" class="section">
         <h2>Profil</h2>
         <p>Contenu de la section Profil...</p>
     </section>
 
+<!-- Menu du Parcours -->
     <section id="parcours" class="section">
         <h2>Parcours</h2>
         <p>Contenu de la section Situation Pro...</p>
     </section>
 
+<!-- Menu de formation -->
     <section id="formation" class="section">
         <h2>Formation</h2>
         <p>Contenu de la section Formation...</p>
     </section>
 
+<!-- Menu des Compétences -->
     <section id="skills" class="section">
         <h2>Compétences</h2>
         <p>Contenu de la section Compétences...</p>
@@ -78,6 +82,8 @@
                     <img src="images/logo/linux.png" alt="Linux">
                     <img src="images/logo/windows.png" alt="Windows">
                     <img src="images/logo/veam.png" alt="Veam">
+                    <img src="images/logo/putty.png" alt="Putty">
+                    <img src="images/logo/cpt.png" alt="CiscoPacketTracer">
                 </div>
                 
                 <!-- DUPLICATION pour assurer la continuité -->
@@ -98,21 +104,48 @@
                     <img src="images/logo/linux.png" alt="Linux">
                     <img src="images/logo/windows.png" alt="Windows">
                     <img src="images/logo/veam.png" alt="Veam">
+                    <img src="images/logo/putty.png" alt="Putty">
+                    <img src="images/logo/cpt.png" alt="CiscoPacketTracer">
                 </div>
             </div>
         </div> 
+
+    <!-- Menu de certificats -->
+    <h1>📜 Diplômes et Certifications</h1>
+    <p>Mes différents diplômes et certifications obtenus.</p>
+    <div class="certif">
+        <button class="filter-btn active" data-category="all">TOUS</button>
+        <button class="filter-btn" data-category="mooc-anssi">MOOC ANSSI</button>
+        <button class="filter-btn" data-category="mooc-rgpd">MOOC RGPD CNIL</button>
+        <button class="filter-btn" data-category="sololearn">SOLOLEARN</button>
+    </div>
+
+    <div id="certificates-container" class="certificates-container">
+        <div class="certificate-card mooc-anssi">
+            <img src="certificat.jpg" alt="Certificat">
+            <div class="overlay">
+                <button onclick="alert('Détails du certificat')">👁️ Détails</button>
+                <a href="image/MOOC_ANSSI.pdf" download>⬇️ Télécharger</a>
+            </div>
+        </div>
+        <!-- Ajouter d'autres certificats ici avec les classes correspondantes -->
+    </div>
+        <script src="Script.js/certificat.js"></script>
     </section>
 
+<!-- Menu Veille -->
     <section id="veille" class="section">
         <h2>Veille</h2>
         <p>Contenu de la section veille...</p>
     </section>
 
+<!-- Menu Projet Professionnel -->
     <section id="pro" class="section">
         <h2>Projet Professionnel</h2>
         <p>Contenu de la section Projet Pro...</p>
     </section>
 
+<!-- Menu Contact -->
     <section id="contact" class="section contact-section">
         <style>
             .contact-section {
