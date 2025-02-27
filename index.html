@@ -124,10 +124,18 @@
         <div class="certificate-card mooc-anssi">
             <img src="images/MOOC_ANSSI.png" alt="Certificat">
             <div class="overlay">
-                <button onclick="alert('Détails du certificat')">👁️ Détails</button>
-                <a href="image/MOOC_ANSSI.pdf" download="MOOC_ANSSI.pdf">⬇️ Télécharger</a>
+                <button class="detail-btn">👁️ Détails</button>
+                <a href="images/MOOC_ANSSI.pdf" download="MOOC_ANSSI.pdf">⬇️ Télécharger</a>
             </div>
         </div>
+    <!-- Fenêtre modale pour afficher les détails -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="" alt="Aperçu du certificat">
+        </div>
+    </div>
+
         <!-- Ajouter d'autres certificats ici avec les classes correspondantes -->
     </div>
         <script src="Script.js/certificat.js"></script>

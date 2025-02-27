@@ -1,23 +1,31 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const buttons = document.querySelectorAll(".filter-btn");
-    const certificates = document.querySelectorAll(".certificate-card");
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeBtn = document.querySelector(".close");
 
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            const category = button.getAttribute("data-category");
+    // Sélectionner tous les boutons "Détails"
+    const detailButtons = document.querySelectorAll(".detail-btn");
 
-            // Changer le style des boutons actifs
-            buttons.forEach(btn => btn.classList.remove("active"));
-            button.classList.add("active");
-
-            // Filtrage des certificats
-            certificates.forEach(cert => {
-                if (category === "all" || cert.classList.contains(category)) {
-                    cert.style.display = "block";
-                } else {
-                    cert.style.display = "none";
-                }
-            });
+    detailButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            // Récupérer l'image du certificat associé au bouton
+            const imgSrc = this.closest(".certificate-card").querySelector("img").src;
+            
+            // Ouvrir la modale avec l'image
+            modalImg.src = imgSrc;
+            modal.style.display = "flex";
         });
+    });
+
+    // Fermer la modale quand on clique sur la croix
+    closeBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+    // Fermer la modale en cliquant en dehors de l'image
+    modal.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
     });
 });
