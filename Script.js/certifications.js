@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modal-img");
     const closeBtn = document.querySelector(".close");
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const certificates = document.querySelectorAll(".certificate-card");
 
     // Sélectionner tous les boutons "Détails"
     const detailButtons = document.querySelectorAll(".detail-btn");
@@ -27,5 +29,26 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.target === modal) {
             modal.style.display = "none";
         }
+    });
+
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            // Retirer la classe "active" de tous les boutons
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            // Ajouter "active" au bouton cliqué
+            this.classList.add("active");
+
+            // Récupérer la catégorie sélectionnée
+            const category = this.getAttribute("data-category");
+
+            // Filtrer les certificats
+            certificates.forEach((certif) => {
+                if (category === "all" || certif.classList.contains(category)) {
+                    certif.style.display = "block"; // Afficher
+                } else {
+                    certif.style.display = "none"; // Cacher
+                }
+            });
+        });
     });
 });

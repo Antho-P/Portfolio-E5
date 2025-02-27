@@ -114,20 +114,32 @@
     <h1>📜 Diplômes et Certifications</h1>
     <p>Mes différents diplômes et certifications obtenus.</p>
     <div class="certif">
-        <button class="filter-btn active" data-category="all">TOUS</button>
-        <button class="filter-btn" data-category="mooc-anssi">MOOC ANSSI</button>
-        <button class="filter-btn" data-category="mooc-rgpd">MOOC RGPD CNIL</button>
-        <button class="filter-btn" data-category="sololearn">SOLOLEARN</button>
-    </div>
-
-    <div id="certificates-container" class="certificates-container">
-        <div class="certificate-card mooc-anssi">
-            <img src="images/MOOC_ANSSI.png" alt="Certificat">
-            <div class="overlay">
-                <button class="detail-btn">👁️ Détails</button>
-                <a href="images/MOOC_ANSSI.pdf" download="MOOC_ANSSI.pdf">⬇️ Télécharger</a>
-            </div>
+        <div class="filters">
+            <button class="filter-btn active" data-category="all">TOUS</button>
+            <button class="filter-btn" data-category="mooc-anssi">MOOC ANSSI</button>
+            <button class="filter-btn" data-category="mooc-rgpd">MOOC RGPD CNIL</button>
+            <button class="filter-btn" data-category="sololearn">SOLOLEARN</button>
         </div>
+
+        <div id="certificates-container" class="certificates-container">
+            <div class="certificate-card mooc-anssi">
+                <img src="images/MOOC_ANSSI.png" alt="Certificat">
+                <div class="overlay">
+                    <button class="detail-btn">👁️ Détails</button>
+                    <a href="images/MOOC_ANSSI.pdf" download="MOOC_ANSSI.pdf">⬇️ Télécharger</a>
+                </div>
+            </div>
+            <!-- Ajouter d'autres certificats ici avec les classes correspondantes -->
+            <div class="certificate-card sololearn">
+                <img src="images/MOOC_ANSSI.png" alt="Certificat">
+                <div class="overlay">
+                    <button class="detail-btn">👁️ Détails</button>
+                    <a href="images/MOOC_ANSSI.pdf" download="MOOC_ANSSI.pdf">⬇️ Télécharger</a>
+                </div>
+            </div>
+
+        </div>
+    </div>    
     <!-- Fenêtre modale pour afficher les détails -->
     <div id="modal" class="modal">
         <div class="modal-content">
@@ -136,10 +148,7 @@
         </div>
     </div>
 
-        <!-- Ajouter d'autres certificats ici avec les classes correspondantes -->
-    </div>
-        <script src="Script.js/certificat.js"></script>
-    </section>
+    <script src="Script.js/certifications.js"></script>
 
 <!-- Menu Veille -->
     <section id="veille" class="section">
