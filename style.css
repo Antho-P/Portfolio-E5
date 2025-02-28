@@ -274,26 +274,19 @@ nav ul li a.active {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 10px;
-    width: 100%;
 }
 
 /* Style des cartes certificats */
 .certificate-card {
     position: relative;
     flex: 1 1 calc(33.333% - 20px);
-    max-width: calc(3333.333% - 20px);
-    min-width: 300px;
+    max-width: calc(33.333% - 20px);
+    min-width: 530px;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background: white;
-}
-
-.certificates-container > .certificate-card:only-child {
-    flex: 1 1 auto;
-    max-width: 60px; /* Ajuste cette valeur selon tes préférences */ cela ne change rein malheuresemnt quand le certificat est tout seul il est toujorus aussi grso (il prend pratiquement toute la page, car il doit être "synchro" avec le container (box grise) qui est large comme l'écran pratiquement dans tout les cas
 }
 
 /* Style des images des certificats */
