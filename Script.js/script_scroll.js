@@ -1,19 +1,21 @@
 // Fonction de défilement fluide avec animation
 function smoothScroll(target, duration) {
     var targetElement = document.querySelector(target);
-    var targetPosition = targetElement.getBoundingClientRect().top;
+    if (!targetElement) return; // Vérifier si l'élément existe
+
+    var headerHeight = document.querySelector("header").offsetHeight; 
+    var targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight; // Décalage ajusté
     var startPosition = window.pageYOffset;
     var startTime = null;
 
     function animation(currentTime) {
         if (startTime === null) startTime = currentTime;
         var timeElapsed = currentTime - startTime;
-        var run = ease(timeElapsed, startPosition, targetPosition, duration);
+        var run = ease(timeElapsed, startPosition, targetPosition - startPosition, duration);
         window.scrollTo(0, run);
         if (timeElapsed < duration) requestAnimationFrame(animation);
     }
 
-    // Fonction d'animation easing pour adoucir le scroll
     function ease(t, b, c, d) {
         t /= d / 2;
         if (t < 1) return c / 2 * t * t + b;

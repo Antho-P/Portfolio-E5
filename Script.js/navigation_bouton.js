@@ -4,25 +4,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function handleScroll() {
         let scrollPosition = window.scrollY + window.innerHeight / 2;
-        
+        let headerHeight = document.querySelector("header").offsetHeight; // Hauteur du header
+    
         sections.forEach((section) => {
-            if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
-                // On récupère l'ID de la section active
+            let sectionTop = section.offsetTop - headerHeight - 10; // Ajustement
+    
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + section.offsetHeight) {
                 const activeSectionId = section.getAttribute("id");
-
-                // On boucle sur chaque lien de navigation
+    
                 navLinks.forEach((link) => {
                     if (link.getAttribute("href").substring(1) === activeSectionId) {
-                        // Ajouter la classe active au lien correspondant à la section visible
                         link.classList.add("active");
                     } else {
-                        // Supprimer la classe active des autres liens
                         link.classList.remove("active");
                     }
                 });
             }
         });
     }
+    
     // Lancement de la fonction lors du défilement
     window.addEventListener("scroll", handleScroll);
 });
