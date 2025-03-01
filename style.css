@@ -36,7 +36,7 @@ nav .logo h1 {
 }
 
 nav .logo h1 .blue-letter {
-    color: #00eaff; /* Bleu pour le "A" et le "P" */
+    color: #00eaff; 
 }
 
 nav ul {
@@ -239,10 +239,11 @@ nav ul li a.active {
     background-color: #222;
     padding: 20px;
     border-radius: 40px;
-    margin-bottom: 20px;
     width: 90%;
     max-width: 8000px;
     margin: auto;
+    margin-top: 1%; 
+    margin-bottom: 1%;
 }
 
 /* Alignement des boutons */
@@ -273,7 +274,7 @@ nav ul li a.active {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; 
 }
 
 /* Style des cartes certificats */
@@ -395,6 +396,7 @@ nav ul li a.active {
 /* Section Contact */
 .contact-section {
     background-color: #e0e0e0;
+    display: flex;
     padding: 80px 20px;
     text-align: center;
 }
@@ -421,8 +423,7 @@ nav ul li a.active {
     margin-bottom: 5px;
 }
 
-.input-group input,
-.input-group textarea {
+.input-group input, .input-group textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -450,6 +451,7 @@ nav ul li a.active {
 /* Section Réseaux Sociaux */
 .contact-banner {
     background-color: #3b3d3c; /* Couleur de fond */
+    display: center;
     color: #ffffff;
     text-align: left ;
     margin-right: -5px;
@@ -464,7 +466,7 @@ nav ul li a.active {
 
 .contact-info p {
     font-size: 18px;
-    margin: 10px 0;
+    margin: 15px -15%;
 }
 
 .contact-info a {
