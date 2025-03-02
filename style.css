@@ -133,13 +133,6 @@ nav ul li a.active {
     background-color: #e0e0e0; /* Alterner les couleurs des sections */
 }
 
-.section h3{
-    font-size: 25px;
-    margin-top: auto;
-    margin-bottom: 10px;
-    margin-left: 20px;
-}
-
 .section h2{
     font-size: 36px;
     margin-top: auto;
@@ -147,11 +140,111 @@ nav ul li a.active {
     margin-left: 20px;
 }
 
+.section h3{
+    font-size: 25px;
+    margin-top: auto;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.section h4{
+    font-size: 30px;
+    margin-top: auto;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    text-align: center;
+    color: #000000d8;
+}
+
 .section p, .section i {
     font-size: 18px;
     line-height: 1.6;
     margin-left: 20px;
 }
+
+
+/*Section Formation*/
+.BTS-content {
+    margin-bottom: 20px;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;          
+    justify-content: center;  
+    gap: 40px;                
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.flip-box {
+    display: flex;
+    width: 40%;    
+    height: 400px;
+    perspective: 700px; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.9s;
+    transform-style: preserve-3d; 
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    display: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* Front style */
+.flip-box-front {
+    background-image: linear-gradient(to bottom left, #007b86b3, #004997);
+    color: #000;
+}
+
+/* Optional: adapt the image on the front */
+.flip-box-front img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Back style*/
+.flip-box-back {
+    display: flex;
+    background-image: linear-gradient(to bottom left, #00eaff, #007bff);  
+    color: #330505;
+    transform: rotateY(180deg); /* So it's reversed initially */
+    text-align: justify;
+    padding: 20px;
+    border-radius: 0; /* if you want round corners, do it here */
+}
+
+/* text on the back */
+.flip-box-back p {
+    display: flex;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
 
 /*Section Skills*/
 .banner-container {
@@ -308,8 +401,7 @@ nav ul li a.active {
     color: white;
 }
 
-.overlay button:hover,
-.overlay a:hover {
+.overlay button:hover, .overlay a:hover {
     opacity: 0.8;
 }
 
