@@ -115,14 +115,17 @@
         </div>
 
         <!-- Sections Poursuites d'études et Débouché pro-->
-        <div class="suite-bts">
+        <div class="bts-suite">
             <h3>💼 -Poursuites d'études et débouchés professionnels-</h3>
             <p  style="text-align: justify; margin: 0 15%;">J'ai effectué l'option <b>A (Solution d'Infrastructure, Systèmes et Réseaux)</b> du BTS SIO en alternance.
-                <br>Voici donc les possibilitées d'études supérieures qui s'offres à moi:</br>
+                <br>Voici donc les possibilitées d'<b>études supérieures</b> qui s'offres à moi et également les <b>débouchées professionnels</b> en sortant de ce BTS:</br>
             </p>
-            <img src="images/suite-bts.png" alt="suite-bts">
-            <i>Source: <a href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/bts-services-informatiques-aux-organisations-option-a-solutions-d-infrastructure-systemes-et-reseaux" target="_blank">Onisep</a></i>
+            <div class="suite-bts">
+                <img src="images/suite-bts.png" alt="suite-bts">
+                <i>Source: <a href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/bts-services-informatiques-aux-organisations-option-a-solutions-d-infrastructure-systemes-et-reseaux" target="_blank">Onisep</a></i>
+            </div>
         </div>
+
     </section>
 
 <!-- Sections Portfolio -->
@@ -183,51 +186,52 @@
             </div>
         </div> 
 
-    <!-- Menu de certificats -->
-    <h3>📜 -Diplômes et Certifications-</h3>
-    <p>Mes différents diplômes et certifications obtenus en autodidacte au cours de mes années en BTS.</p>
-    <div class="certif">
-        <div class="filters">
-            <button class="filter-btn active" data-category="all">TOUS</button>
-            <button class="filter-btn" data-category="mooc-anssi">MOOC ANSSI</button>
-            <button class="filter-btn" data-category="mooc-rgpd">MOOC RGPD CNIL</button>
-            <button class="filter-btn" data-category="sololearn">SOLO LEARN</button>
-        </div>
-
-        <div id="certificates-container" class="certificates-container">
-            <div class="certificate-card mooc-anssi">
-                <img src="images/certif/MOOC_ANSSI.png" alt="ANSSI">
-                <div class="overlay">
-                    <button class="detail-btn">👁️ Détails</button>
-                    <a href="images/certif/MOOC_ANSSI.pdf" download="MOOC_ANSSI.pdf">⬇️ Télécharger</a>
-                </div>
-            </div>
-            <div class="certificate-card sololearn">
-                <img src="images/certif/MOOC_Python.png" alt="Python">
-                <div class="overlay">
-                    <button class="detail-btn">👁️ Détails</button>
-                    <a href="images/certif/MOOC_Python.pdf" download="MOOC_Python.pdf">⬇️ Télécharger</a>
-                </div>
-            </div>
-            <div class="certificate-card sololearn">
-                <img src="images/certif/MOOC_SQL.png" alt="SQL">
-                <div class="overlay">
-                    <button class="detail-btn">👁️ Détails</button>
-                    <a href="images/certif/MOOC_SQL.pdf" download="MOOC_SQL.pdf">⬇️ Télécharger</a>
-                </div>
+        <!-- Menu de certificats -->
+        <h3>📜 -Diplômes et Certifications-</h3>
+        <p>Mes différents diplômes et certifications obtenus en autodidacte au cours de mes années en BTS.</p>
+        <div class="certif">
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">TOUS</button>
+                <button class="filter-btn" data-category="mooc-anssi">MOOC ANSSI</button>
+                <button class="filter-btn" data-category="mooc-rgpd">MOOC RGPD CNIL</button>
+                <button class="filter-btn" data-category="sololearn">SOLO LEARN</button>
             </div>
 
-        </div>
-    </div>    
-    <!-- Fenêtre modale pour afficher les détails -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img id="modal-img" src="" alt="Aperçu du certificat">
-        </div>
-    </div>
+            <div id="certificates-container" class="certificates-container">
+                <div class="certificate-card mooc-anssi">
+                    <img src="images/certif/MOOC_ANSSI.png" alt="ANSSI">
+                    <div class="overlay">
+                        <button class="detail-btn">👁️ Détails</button>
+                        <a href="images/certif/MOOC_ANSSI.pdf" download="MOOC_ANSSI.pdf">⬇️ Télécharger</a>
+                    </div>
+                </div>
+                <div class="certificate-card sololearn">
+                    <img src="images/certif/MOOC_Python.png" alt="Python">
+                    <div class="overlay">
+                        <button class="detail-btn">👁️ Détails</button>
+                        <a href="images/certif/MOOC_Python.pdf" download="MOOC_Python.pdf">⬇️ Télécharger</a>
+                    </div>
+                </div>
+                <div class="certificate-card sololearn">
+                    <img src="images/certif/MOOC_SQL.png" alt="SQL">
+                    <div class="overlay">
+                        <button class="detail-btn">👁️ Détails</button>
+                        <a href="images/certif/MOOC_SQL.pdf" download="MOOC_SQL.pdf">⬇️ Télécharger</a>
+                    </div>
+                </div>
 
-    <script src="Script.js/certifications.js"></script>
+            </div>
+        </div>    
+        <!-- Fenêtre modale pour afficher les détails -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="modal-img" src="" alt="Aperçu du certificat">
+            </div>
+        </div>
+
+        <script src="Script.js/certifications.js"></script>
+    </section>
 
 <!-- Menu Veille -->
     <section id="veille" class="section">

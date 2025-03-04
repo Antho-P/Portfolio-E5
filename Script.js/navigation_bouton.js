@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let headerHeight = document.querySelector("header").offsetHeight; // Hauteur du header
     
         sections.forEach((section) => {
-            let sectionTop = section.offsetTop - headerHeight - 10; // Ajustement
+            let sectionTop = section.offsetTop - headerHeight - 5; // Ajustement
     
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + section.offsetHeight) {
                 const activeSectionId = section.getAttribute("id");
