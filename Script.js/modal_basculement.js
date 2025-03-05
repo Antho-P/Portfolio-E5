@@ -1,5 +1,5 @@
 function showCodePreview(imageSrc) {
-    document.getElementById("modal-image").src = imageSrc;
+    document.getElementById("modal-basculement").src = imageSrc;
     document.getElementById("code-modal").style.display = "flex";
 }
 
@@ -7,11 +7,11 @@ function hideCodePreview() {
     document.getElementById("code-modal").style.display = "none";
 }
 
+
 document.addEventListener("DOMContentLoaded", function () {
    
 document.getElementById("code-modal").style.display = "none";
-}	);
-
+});
 
 // Effet de balancement
 document.querySelectorAll('.code-button').forEach(button => {
@@ -29,3 +29,4 @@ document.querySelectorAll('.code-button').forEach(button => {
         button.style.transform = 'rotateY(0) rotateX(0)';
     });
 });
+
