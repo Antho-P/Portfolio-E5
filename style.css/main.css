@@ -164,6 +164,144 @@ nav ul li a.active {
 
 
 /*Section Mon Portfolio*/
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+/* Style des cartes portfolio */
+.portfolio-card {
+    position: relative;
+    flex: 1 1 calc(33.333% - 20px);
+    width: 100%;
+    max-width: 800px;
+    min-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: whitesmoke;
+}
+
+/* Style des images des portfolio */
+.portfolio-card img {
+    width: 100%;
+    height: auto;
+    transition: 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.portfolio-card:hover img {
+    filter: blur(3px) brightness(70%);
+}
+
+/* Overlay avec boutons */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.portfolio-card:hover .overlay {
+    opacity: 1;
+}
+
+/* Style des boutons dans l'overlay */
+.overlay button, .overlay a {
+    background: white;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.overlay a {
+    background: #007bff;
+    color: white;
+}
+
+.overlay button:hover, .overlay a:hover {
+    opacity: 0.8;
+}
+
+/* Style des boutons */
+.filter-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #00eaff;
+}
+
+/* Styles du modal*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.modal img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    border-radius: 5px;
+}
+
+/* Bouton fermer aperçu */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #555;
+}
+
+.close:hover {
+    color: black;
+}
+
+
+/*Boutons code php exemple*/
 .button-container {
     display: flex;
     width: 100%;
@@ -222,6 +360,10 @@ nav ul li a.active {
 @media screen and (max-width: 880px) { 
     .button-container {
         gap: 2%;
+    }
+    .portfolio {
+        width: 100%;
+        max-width: none;
     }
 }
 

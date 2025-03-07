@@ -66,7 +66,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: auto; 
+    overflow-y: auto; 
+    min-height: 100%;
     padding: 20px;
     background-image: linear-gradient(to bottom left, #00eaff, #007bff);
     color: #330505;
@@ -197,7 +198,7 @@
 }
 
 .debouche-pro ul {
-    list-style-type: disc;
+    list-style: '> ';
     padding-left: 20px;
     margin-top: 10px;
 }

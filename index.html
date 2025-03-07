@@ -166,13 +166,20 @@
                         </ul>
                     </div>
                     <div class="debouche-pro">
-                        <h2>Poursuites d'études</h2>
-                        <p>Le BTS vise l&rsquo;insertion professionnelle. Avec un tr&egrave;s bon dossier ou une mention &agrave; l'examen, une poursuite d&rsquo;&eacute;tudes 
-                            est envisageable en licence LMD (licence informatique et parcours MIAGE), en licence professionnelle, en &eacute;cole d'ing&eacute;nieurs ou en &eacute;cole sp&eacute;cialis&eacute;e.
+                        <h2>Débouchés professionnels</h2>
+                        <p>Le titulaire participera à la production et à la fourniture des services informatiques en réalisant ou en adaptant le réseau informatique (infrastructure) et en assurant le fonctionnement optimal des équipements et services informatiques.<br></br>
+                            Il peut intervenir soit en interne dans une entreprise, soit en tant qu'intervenant d'une entreprise de services du numérique (ESN), d'un éditeur de logiciels ou d'une société de conseil en technologies.
                         </p> 
                         <strong>Exemple(s) de métiers :</strong>
                         <ul>
-
+                            <li>Administrateur systèmes et réseaux</li>
+                            <li>Informaticien support et déploiement</li>
+                            <li>Pilote d’exploitation</li>
+                            <li>Support systèmes et réseaux</li>
+                            <li>Technicien d’infrastructure</li>
+                            <li>Technicien de production</li>
+                            <li>Technicien systèmes et réseaux</li>
+                            <li>Technicien réseau et télécoms</li>
                         </ul>
                     </div>
     
@@ -185,16 +192,49 @@
     <section id="portfolio" class="section">
         <h2>Mon Portfolio</h2>
         <p>Contenu du portfolio...</p>
+        <div class="certif">
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">TOUS</button>
+                <button class="filter-btn" data-category="windows">WINDOWS</button>
+                <button class="filter-btn" data-category="linux">LINUX</button>
+                <button class="filter-btn" data-category="autre">AUTRE</button>
+            </div>
+
+            <div id="portfolio-container" class="portfolio-container">
+                <div class="portfolio-card mooc-anssi">
+                    <img src="assets/portfolio/.png" alt="">
+                    <div class="overlay">
+                        <button class="detail-btn" target="_blank">👁️ Détails</button>
+                        <a href="assets/images/portfolio/.pdf" target="_blank">⬇️ Ouvrir en PDF</a>
+                    </div>
+                </div>
+                <div class="portfolio-card cisco">
+                    <img src="assets/images/portfolio/.png" alt="">
+                    <div class="overlay">
+                        <button class="detail-btn">👁️ Détails</button>
+                        <a href="assets/images/portfolio/.pdf" target="_blank">⬇️ Ouvrir en PDF</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>    
+        <!-- Fenêtre modale pour afficher les détails -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="modal-img" src="" alt="Aperçu du certificat">
+            </div>
+        </div>
+        <script src="script.js/portfolio.js"></script>
+        
         <div class="button-container">
             <button class="code-button" onclick="showCodePreview('assets/images/background/reedition_zpl_rendu.png')" data-image="reedition_zpl.png"></button>
             <button class="code-button" onclick="showCodePreview('assets/images/background/chaineauto_rendu.png')" data-image="chaineauto_rendu.png"></button>
         </div>
-    
         <div id="code-modal" class="basculement" onclick="hideCodePreview()">
             <img id="modal-basculement">
         </div>
-    
-        <!-- Script JavaScript -->
         <script src="script.js/modal_basculement.js"></script>
     </section>
 
