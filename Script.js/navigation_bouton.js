@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav ul li a");
+    const navLinks = document.querySelectorAll(".desktop-menu li a");
 
     function handleScroll() {
         let scrollPosition = window.scrollY + window.innerHeight / 2;

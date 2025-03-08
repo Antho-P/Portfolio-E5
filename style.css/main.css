@@ -43,28 +43,78 @@ nav .logo h1 .blue-letter {
     color: #00eaff; 
 }
 
-nav ul {
+/* --- MENU PC --- */
+.desktop-menu {
     list-style: none;
     display: flex;
 }
 
-nav ul li {
+.desktop-menu li {
     margin-left: 20px;
 }
 
-nav ul li a {
+.desktop-menu li a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #00eaff; /* Effet hover sur les liens */
+.desktop-menu li a:hover {
+    color: #00eaff;
 }
 
-nav ul li a.active {
-    display: none; /* Masque le bouton actif */
+.desktop-menu li a.active {
+    display: none;
+}
+
+/* --- MENU MOBILE --- */
+.menu-toggle {
+    display: none; 
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    position: absolute;
+    top: auto;
+    left: 20px;
+}
+
+.menu-toggle:hover {
+    color: #00eaff;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* Ajuste selon la hauteur de ton header */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+.mobile-menu.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-menu li a {
+    display: block;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.mobile-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Style du Hero section */
@@ -357,7 +407,18 @@ nav ul li a.active {
     border-radius: 5px;
 }
 
-@media screen and (max-width: 880px) { 
+
+    /* Menu responsive */
+@media screen and (max-width: 1200px) {
+    .menu-toggle {
+        display: block;
+    }
+    .desktop-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .button-container {
         gap: 2%;
     }
