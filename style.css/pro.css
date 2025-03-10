@@ -1,7 +1,7 @@
 /* Section Projet Pro */
 
 /* Section Contact */
-.contact-section {
+.contact {
     background-color: #e0e0e0;
     display: flex ;
     padding: auto;
@@ -14,14 +14,21 @@
     background-color: #363939; 
     color: #ffffff;
     text-align: justify ;
-    margin-right: -5px;
-    padding: 40px 20%;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    width: 50%;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 1%; 
+    margin-bottom: 1%;
 }
 
 .contact-info p {
     font-size: 18px;
-    margin: 15px -15%;
+    display: flex;
+    justify-items: auto;
 }
 
 .contact-info a {
@@ -55,8 +62,7 @@
 /* RESPONSIVE / Ajuste l'espacement sur mobile */
 @media screen and (max-width: 768px) {
     .banner-content img {
-        width: 80px;
-        margin-right: 15px; 
+
     }
     .contact-banner{
         width: 75%;
