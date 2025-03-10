@@ -88,10 +88,10 @@ nav .logo h1 .blue-letter {
 .mobile-menu {
     display: none;
     position: absolute;
-    top: 60px; /* Ajuste selon la hauteur de ton header */
+    top: 50px; 
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
 }
 
@@ -102,19 +102,21 @@ nav .logo h1 .blue-letter {
 
 .mobile-menu li {
     padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none;
+    border-right: none;
 }
 
 .mobile-menu li a {
     display: block;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
     text-decoration: none;
     padding: 10px 20px;
 }
 
 .mobile-menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Style du Hero section */
