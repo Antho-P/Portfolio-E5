@@ -208,6 +208,17 @@ nav .logo h1 .blue-letter {
     color: #000000d8;
 }
 
+.section h5{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #090909;
+    text-shadow: 0 0 5px #fff, 0 0 2px #9feaff, 0 0 5px #ff00ff, 0 0 10px #00eaff,
+      0 0 15px #00eaff, 0 0 20px #00eaff, 0 0 25px #00eaff;
+}
+
+
 .section p, .section i {
     font-size: 18px;
     line-height: 1.6;
