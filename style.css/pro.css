@@ -1,15 +1,6 @@
 /* Section Projet Pro */
 
 /* Section Contact */
-.contact {
-    background-color: #e0e0e0;
-    display: flex ;
-    padding: auto;
-    height: 50vh;
-    text-align: center;
-}
-
-/* Section Réseaux Sociaux */
 .contact-banner {
     background-color: #363939; 
     color: #ffffff;
@@ -62,7 +53,7 @@
 /* RESPONSIVE / Ajuste l'espacement sur mobile */
 @media screen and (max-width: 768px) {
     .banner-content img {
-
+        width: 75%;
     }
     .contact-banner{
         width: 75%;
