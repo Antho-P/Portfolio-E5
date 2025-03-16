@@ -1,1 +1,65 @@
 /* Section About */
+
+/* Partie Bouton CV */
+.cv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+    margin-bottom: 40px;
+    margin: 0 20%;
+}
+
+.button_slide {
+    display: inline-block;
+    border: 2.5px solid black;
+    padding: 30px 50px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.button_slide a {
+    text-decoration: none;
+    font-family: 'courier new';
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.button_slide {
+    background: linear-gradient(45deg, #000000, #404040);
+}
+
+
+/* Effet hover sur Consulter CV */
+.button_slide:hover {
+    background: linear-gradient(90deg, #1a1a1a, #bfbfbf);
+    box-shadow: 0 0 5px #fff, 0 0 2px #9feaff, 0 0 5px #ff00ff, 0 0 10px #00eaff,
+    0 0 15px #00eaff, 0 0 20px #00eaff, 0 0 25px #00eaff;
+    text-shadow: 0 0 5px #fff, 0 0 2px #9feaff, 0 0 5px #160017, 0 0 5px #00eaff,
+    0 0 10px #00eaff, 0 0 10px #00eaff, 0 0 20px #00eaff;
+}
+
+.button_slide:hover a {
+    color: black;
+}
+
+@media screen and (max-width: 1100px) {
+    .cv {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Ajoute un espacement entre les boutons */
+        margin: 0 10%; /* Réduit la marge pour un meilleur centrage */
+    }
+
+    .button_slide {
+        width: 100%; /* Permet aux boutons d'occuper toute la largeur */
+        max-width: 300px; /* Fixe une largeur maximale */
+        padding: 20px 40px; /* Ajuste le padding pour un meilleur rendu */
+    }
+}
