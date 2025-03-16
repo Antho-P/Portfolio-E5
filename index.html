@@ -65,12 +65,21 @@
             </p>
             <div class="cv">
                 <div class="button_slide">
-                  <a href="assets/CV_Anthony_P.pdf" target="_blank">Consulter CV</a>
+                  <a href="assets/CV_Anthony_P.pdf" class="open-modal">Consulter CV</a>
                 </div>
                 <div class="button_slide">
                   <a href="assets/CV_Anthony_P.pdf" download="CV Anthony PETRICCA">Télécharger CV</a>
                 </div>
             </div>
+
+            <!-- Modale pour afficher le CV -->
+            <div id="cv-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <iframe id="cv-frame" src="" width="100%" alt="Aperçu du certificat"></iframe>
+                </div>
+            </div>
+            <script src="script.js/cv.js"></script>
 
         <!-- ======= Etudes  ======= -->
         <div class="etudes">
@@ -260,15 +269,7 @@
 
             </div>
         </div>    
-        <!-- Fenêtre modale pour afficher les détails -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <img id="modal-img" src="" alt="Aperçu du certificat">
-            </div>
-        </div>
-        <script src="script.js/portfolio.js"></script>
-        
+
         <div class="button-container">
             <button class="code-button" onclick="showCodePreview('assets/images/background/reedition_zpl_rendu.png')" data-image="reedition_zpl.png"></button>
             <button class="code-button" onclick="showCodePreview('assets/images/background/chaineauto_rendu.png')" data-image="chaineauto_rendu.png"></button>
