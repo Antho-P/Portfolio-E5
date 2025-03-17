@@ -17,36 +17,45 @@
     padding: 30px 50px;
     text-align: center;
     transition: all 0.5s ease-in-out;
-}
-
-.button_slide a {
+    cursor: pointer;
+    position: relative; 
+    overflow: hidden;
+    background: linear-gradient(45deg, #000000, #404040);
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    font-family: 'courier new';
+    font-family: 'courier new', monospace;
     font-size: 25px;
     font-weight: bold;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
 }
 
-.button_slide {
-    background: linear-gradient(45deg, #000000, #404040);
-}
-
-
-/* Effet hover sur Consulter CV */
 .button_slide:hover {
     background: linear-gradient(90deg, #1a1a1a, #bfbfbf);
     box-shadow: 0 0 5px #fff, 0 0 2px #9feaff, 0 0 5px #ff00ff, 0 0 10px #00eaff,
     0 0 15px #00eaff, 0 0 20px #00eaff, 0 0 25px #00eaff;
     text-shadow: 0 0 5px #fff, 0 0 2px #9feaff, 0 0 5px #160017, 0 0 5px #00eaff,
     0 0 10px #00eaff, 0 0 10px #00eaff, 0 0 20px #00eaff;
+    color: black;
 }
 
-.button_slide:hover a {
-    color: black;
+.cv-modal {
+    display: none; 
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+#cv-frame{
+    width: 100%;
+    height: 85vh;
+    border: none;
 }
 
 @media screen and (max-width: 1100px) {
