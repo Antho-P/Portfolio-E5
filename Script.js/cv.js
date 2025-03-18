@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ouvrir la modale avec le CV
     consulterBtn.addEventListener("click", function (event) {
         event.preventDefault(); // Empêche l'ouverture en _blank
-        cvFrame.src = "../assets/CV/CV_Anthony_P.png"; // Charge le PDF dans l'iframe
+        cvFrame.src = "./assets/CV/CV_Anthony_P.png"; // Charge le PDF dans l'iframe
         modal.style.display = "flex"; // Affiche la modale
     });
 
