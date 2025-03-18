@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modal-img");
-    const closeBtn = document.querySelector(".close");
     const filterButtons = document.querySelectorAll(".filter-btn");
     const certificates = document.querySelectorAll(".certificate-card");
 
@@ -17,11 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
             modalImg.src = imgSrc;
             modal.style.display = "flex";
         });
-    });
-
-    // Fermer la modale quand on clique sur la croix
-    closeBtn.addEventListener("click", function() {
-        modal.style.display = "none";
     });
 
     // Fermer la modale en cliquant en dehors de l'image
