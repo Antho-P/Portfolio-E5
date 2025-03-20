@@ -58,6 +58,51 @@
     border: none;
 }
 
+/*Partie Etudiant et Alternant*/
+.etudiant ul, .alternant ul {
+    list-style: none; 
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.etudiant ul li, .alternant ul li {
+    margin-left: 5%;
+    display: flex;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.etudiant ul li::before, .alternant ul li::before {
+    content: ">"; 
+    position: absolute;
+    left: 0;
+    color: #00eaff; 
+    font-size: 16px;
+}
+
+.etudes-alternance {
+    margin-right: 5px;
+}
+
+#sous-liste {
+    margin-top: 20px;
+}
+
+#sous-liste li {
+    position: relative;
+    padding-left: 20px; 
+    margin-bottom: 3px;
+}
+
+#sous-liste li::before {
+    content: "﹡";
+    position: flex;
+    left: 0;
+    color: #000000; 
+    font-size: 25px;
+}
+
 @media screen and (max-width: 1100px) {
     .cv {
         flex-direction: column;
