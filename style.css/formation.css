@@ -64,10 +64,9 @@
 .flip-box-back {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     overflow-y: auto; 
-    min-height: 100%;
+    max-height: 100%;
     padding: 20px;
     background-image: linear-gradient(to bottom left, #00eaff, #007bff);
     color: #330505;
@@ -76,9 +75,12 @@
 }
 
 .flip-box-back p {
-    margin: 10px 20px;
-    line-height: 1.5;
+    flex-grow: 1;
+    overflow-y: auto; 
+    max-height: 100%;
+    padding: 10px;
 }
+
 
 /*Suite BTS*/
 .bts-suite {
@@ -223,10 +225,14 @@
 @media screen and (max-width: 768px) {
     .flip-box {
         width: 90%;
-        min-height: 350px; 
+        min-height: 400px; 
     }
     .flip-box-front img {
         height: 150px; 
+    }
+    .flip-box-back {
+        padding: 15px;
+        max-height: 400px;
     }
     .suite-bts img {
         width: 90%;
