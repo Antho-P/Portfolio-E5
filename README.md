@@ -23,7 +23,7 @@ Ce projet est un **portfolio interactif** développé dans le cadre de l'épreuv
 
     - git status                #Voir fichier(s) ajouté(s)
 
-    - git commit -m "message"   #MAJ des saves sur le pc
+    - git commit -m "message"   #MAJ des sauvegardes sur le pc
 
     - git push                  #Confirmer commande
 

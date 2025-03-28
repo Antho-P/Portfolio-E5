@@ -92,7 +92,7 @@
 #sous-liste li {
     position: relative;
     padding-left: 20px; 
-    margin-bottom: 3px;
+    margin-bottom: 10px;
 }
 
 #sous-liste li::before {
@@ -102,6 +102,88 @@
     color: #000000; 
     font-size: 25px;
 }
+
+/*Partie Parcours et TimeLine*/
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    background: #00eaff;
+    height: 100%;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 30px 0;
+}
+
+.timeline-box {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    min-height: 100px;
+    position: relative;
+}
+
+.left {
+    text-align: right;
+    margin-right: auto;
+}
+
+.right {
+    text-align: left;
+    margin-left: auto;
+}
+
+.timeline-point {
+    width: 15px;
+    height: 15px;
+    background: #00eaff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*  Adaptatif sur mobile */
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-box {
+        width: 90%;
+        text-align: left;
+    }
+
+    .left {
+        margin-right: 0;
+    }
+
+    .right {
+        margin-left: 0;
+    }
+
+    .timeline-point {
+        position: relative;
+        left: auto;
+        transform: none;
+    }
+}
+
 
 @media screen and (max-width: 1100px) {
     .cv {
