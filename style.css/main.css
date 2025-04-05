@@ -234,38 +234,6 @@ nav .logo h1 .blue-letter {
 
 
 /*Section Mon Portfolio*/
-.portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; 
-}
-
-/* Style des cartes portfolio */
-.portfolio-card {
-    position: relative;
-    flex: 1 1 calc(33.333% - 20px);
-    width: 100%;
-    max-width: 800px;
-    min-width: 400px;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: whitesmoke;
-}
-
-/* Style des images des portfolio */
-.portfolio-card img {
-    width: 100%;
-    height: auto;
-    transition: 0.3s ease-in-out;
-}
-
-/* Effet au survol */
-.portfolio-card:hover img {
-    filter: blur(3px) brightness(70%);
-}
 
 /* Overlay avec boutons */
 .overlay {
@@ -281,10 +249,6 @@ nav .logo h1 .blue-letter {
     justify-content: center;
     opacity: 0;
     transition: 0.3s;
-}
-
-.portfolio-card:hover .overlay {
-    opacity: 1;
 }
 
 /* Style des boutons dans l'overlay */
@@ -309,6 +273,70 @@ nav .logo h1 .blue-letter {
 .overlay button:hover, .overlay a:hover {
     opacity: 0.8;
 }
+
+/*Partie Tableau compétences*/
+.portfolio-table {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    margin-top: 2.5%; 
+    margin-bottom: 2.5%;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 12px #00eaff;
+    background: whitesmoke;
+}
+.portfolio-table img {
+    width: 100%;
+    height: auto;
+    transition: 0.3s ease-in-out;
+}
+
+.portfolio-table:hover img {
+    filter: blur(3px) brightness(70%);
+}
+
+.portfolio-table:hover .overlay {
+    opacity: 1;
+}
+
+/*Partie conteneur*/
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+/* Style des cartes portfolio */
+.portfolio-card {
+    position: relative;
+    flex: 1 1 calc(33.333% - 20px);
+    width: 100%;
+    max-width: 800px;
+    min-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: whitesmoke;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: auto;
+    transition: 0.3s ease-in-out;
+}
+
+.portfolio-card:hover img {
+    filter: blur(3px) brightness(70%);
+}
+
+.portfolio-card:hover .overlay {
+    opacity: 1;
+}
+
 
 /* Style des boutons */
 .filter-btn {
@@ -370,14 +398,13 @@ nav .logo h1 .blue-letter {
     color: black;
 }
 
-
 /*Boutons code php exemple*/
 .button-container {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 /* Boutons avec effet arrondi et ombre */
