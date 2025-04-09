@@ -10,7 +10,7 @@
 .banner {
     display: flex;
     width: fit-content;
-    animation: scroll 10s linear infinite;
+    animation: scroll 15s linear infinite;
 }
 
 .banner-content {
