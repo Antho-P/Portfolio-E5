@@ -1,10 +1,10 @@
 # Portfolio - Projet E5 (BTS SIO)
 
-Ce projet est un **portfolio interactif** développé dans le cadre de l'épreuve E4 du BTS SIO (Services Informatiques aux Organisations). Il met en avant mes compétences, mes projets réalisés durant mon alternance ainsi que mes expériences professionnelles.
+Ce projet est un **portfolio interactif** développé dans le cadre de l'épreuve E5 du BTS SIO (Services Informatiques aux Organisations). Il met en avant mes compétences, mes projets réalisés durant mon alternance ainsi que mes expériences professionnelles.
 
 ## 🚀 Fonctionnalités principales
 
-- Présentation personnelle (Accueil, Profil, Formation, Compétences, etc.).
+- Présentation du Portfolio (Accueil, Profil, Formation, Compétences, Projet Professionnel, Veille, Contact).
 - Section dédiée à mes projets (avec détails et insertions).
 - Interface responsive adaptée aux mobiles et ordinateurs.
 - Développer en HTML, CSS et JavaScript
