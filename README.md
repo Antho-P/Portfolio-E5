@@ -13,7 +13,7 @@ Ce projet est un **portfolio interactif** développé dans le cadre de l'épreuv
 
 1. Clonez ce repository :
    ```bash
-   git clone https://XXXX
+   git clone https://github.com/Antho-P/Portfolio-E5
 
 2. Commandes GIT utilisées :
    ```bash
