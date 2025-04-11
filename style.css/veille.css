@@ -1,1 +1,115 @@
 /* Section Veille */
+
+.veille-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+  }
+  
+  .veille-carousel {
+    display: flex;
+    gap: 2rem;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    transition: transform 0.5s ease;
+  }
+  
+  .veille-card {
+    flex: 0 0 calc(33.333% - 2rem);
+    max-width: 100%;
+    perspective: 1000px;
+    position: relative;
+  }
+  
+  .veille-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .veille-card:hover .veille-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .veille-card-front, .veille-card-back {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+  
+  .veille-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .veille-card-back {
+    transform: rotateY(180deg);
+    text-align: center;
+  }
+  
+  .visit-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    color: cyan;
+    text-decoration: none;
+  }
+  
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .nav.left {
+    left: 10px;
+  }
+  .nav.right {
+    right: 10px;
+  }
+  
+  /* Inclinaison sur cartes visibles */
+  .veille-card:nth-child(1) .veille-card-inner {
+    transform: rotateY(10deg);
+  }
+  .veille-card:nth-child(3) .veille-card-inner {
+    transform: rotateY(-10deg);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .veille-card {
+      flex: 0 0 calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .veille-card {
+      flex: 0 0 100%;
+    }
+  }
+  

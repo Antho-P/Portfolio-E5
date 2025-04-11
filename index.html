@@ -241,7 +241,7 @@
         <!-- Sections Poursuites d'études et Débouché pro-->
         <div class="bts-suite">
             <h3 style="text-align: left; font-size: 25px ;">💼 -Poursuites d'études et débouchés professionnels-</h3>
-            <p style="text-align: justify; margin: 0 15%;">J'ai effectué l'option <b>A (Solution d'Infrastructure,
+            <p style="text-align: justify; margin: 0 15%; font-size: 20px ;">J'ai effectué l'option <b>A (Solution d'Infrastructure,
                     Systèmes et Réseaux)</b> du BTS SIO en alternance.
                 <br>Voici donc les possibilitées d'<b>études supérieures</b> qui s'offres à moi et également les
                 <b>débouchées professionnels</b> en sortant de ce BTS:</br>
@@ -326,7 +326,7 @@
                 </div>
 
             </div>
-            <i style="font-size: 150%;">Source: <a
+            <i style="font-size: 120%;">Source: <a
                     href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/bts-services-informatiques-aux-organisations-option-a-solutions-d-infrastructure-systemes-et-reseaux"
                     target="_blank">Onisep</a></i>
         </div>
@@ -388,7 +388,7 @@
         <p><strong>Cette section retrace tous les Hardskills que j'ai développés jusqu'à aujourd'hui notemment grâce à
                 l'alternance.</strong></p>
         <div class="banner-container">
-            <i style="margin-left: 2%;">-Outils, logiciels & languages de programation qui m'on était très utiles autant
+            <i style="margin-left: 2%;">-Outils, logiciels & languages de programmation qui m'on était très utiles autant
                 en entreprise qu'en formation :<br></br></i>
             <div class="banner">
                 <div class="banner-content">
@@ -585,6 +585,67 @@
             Il existe tout particulièrement de la veille technologique en <b>Cybersécurité</b> appelé <b>Veille Cybermenaces</b> qui permet de suivre les actualités "Cyber", 
             par exemple failles de sécurités actuels et les mises à jours des logiciels et systèmes d'exploitation...</br>  
         </p>
+
+        <div class="veille-carousel-container">
+            <button class="nav left" onclick="scrollCarousel(-1)">❮</button>
+            
+            <div class="veille-carousel" id="veille-carousel">
+              <!-- Carte 1 -->
+              <div class="veille-card">
+                <div class="veille-card-inner">
+                  <div class="veille-card-front">
+                    <img src="image1.png" alt="Site 1">
+                  </div>
+                  <div class="veille-card-back">
+                    <p>Contenu veille 1</p>
+                  </div>
+                </div>
+                <a class="visit-link" href="#" target="_blank">Visiter Site 1</a>
+              </div>
+          
+              <!-- Carte 2 -->
+              <div class="veille-card">
+                <div class="veille-card-inner">
+                  <div class="veille-card-front">
+                    <img src="image2.png" alt="Site 2">
+                  </div>
+                  <div class="veille-card-back">
+                    <p>Contenu veille 2</p>
+                  </div>
+                </div>
+                <a class="visit-link" href="#" target="_blank">Visiter Site 2</a>
+              </div>
+          
+              <!-- Carte 3 -->
+              <div class="veille-card">
+                <div class="veille-card-inner">
+                  <div class="veille-card-front">
+                    <img src="image3.png" alt="Site 3">
+                  </div>
+                  <div class="veille-card-back">
+                    <p>Contenu veille 3</p>
+                  </div>
+                </div>
+                <a class="visit-link" href="#" target="_blank">Visiter Site 3</a>
+              </div>
+          
+              <!-- Carte 4 -->
+              <div class="veille-card">
+                <div class="veille-card-inner">
+                  <div class="veille-card-front">
+                    <img src="image4.png" alt="Site 4">
+                  </div>
+                  <div class="veille-card-back">
+                    <p>Contenu veille 4</p>
+                  </div>
+                </div>
+                <a class="visit-link" href="#" target="_blank">Visiter Site 4</a>
+              </div>
+            </div>
+          
+            <button class="nav right" onclick="scrollCarousel(1)">❯</button>
+          </div>
+          
     </section>
 
     <!-- Menu Projet Professionnel -->
@@ -623,6 +684,7 @@
     <script src="./script.js/script_scroll.js"></script>
     <script src="./script.js/navigation_bouton.js"></script>
     <script src="./script.js/certifications.js"></script>
+    <script src="./script.js/veille_carousel.js"></script>
     <script src="./script.js/closeBtn.js"></script>
 </body>
 
