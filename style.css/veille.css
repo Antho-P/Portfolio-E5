@@ -1,115 +1,94 @@
 /* Section Veille */
 
 .veille-carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 2rem 1rem;
-    box-sizing: border-box;
-  }
-  
-  .veille-carousel {
-    display: flex;
-    gap: 2rem;
-    overflow: hidden;
-    scroll-behavior: smooth;
-    transition: transform 0.5s ease;
-  }
-  
-  .veille-card {
-    flex: 0 0 calc(33.333% - 2rem);
-    max-width: 100%;
-    perspective: 1000px;
-    position: relative;
-  }
-  
-  .veille-card-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-  }
-  
-  .veille-card:hover .veille-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .veille-card-front, .veille-card-back {
-    position: absolute;
-    width: 100%;
-    height: 300px;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    overflow: hidden;
-    background: #111;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  }
-  
-  .veille-card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .veille-card-back {
-    transform: rotateY(180deg);
-    text-align: center;
-  }
-  
-  .visit-link {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    font-weight: bold;
-    color: cyan;
-    text-decoration: none;
-  }
-  
-  .nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: black;
-    color: white;
-    font-size: 2rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    z-index: 10;
-    border: none;
-    border-radius: 10px;
-  }
-  
-  .nav.left {
-    left: 10px;
-  }
-  .nav.right {
-    right: 10px;
-  }
-  
-  /* Inclinaison sur cartes visibles */
-  .veille-card:nth-child(1) .veille-card-inner {
-    transform: rotateY(10deg);
-  }
-  .veille-card:nth-child(3) .veille-card-inner {
-    transform: rotateY(-10deg);
-  }
-  
-  /* Responsive */
-  @media (max-width: 1000px) {
-    .veille-card {
-      flex: 0 0 calc(50% - 1rem);
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .veille-card {
-      flex: 0 0 100%;
-    }
-  }
-  
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  padding: 2rem 3rem; /* Ajout d’espace pour flèches */
+}
+
+#veille-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: transform 0.5s ease;
+  gap: 3rem; /* Augmente le gap */
+  perspective: 1200px;
+  flex-wrap: nowrap;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto; /* Pas de flex grow/shrink */
+}
+
+.card {
+  width: 20vw;
+  max-width: 250px;
+  min-width: 180px;
+  height: 250px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.card.incl-left {
+  transform: rotateY(20deg); /* Vers la gauche (bord gauche) */
+}
+
+.card.incl-right {
+  transform: rotateY(-20deg); /* Vers la droite (bord droit) */
+}
+
+.card-main {
+  transform: none;
+}
+
+.card-link {
+  text-align: center;
+  margin-top: 0.8rem;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+  padding: 0 1rem; /* Espacement entre les bords et les flèches */
+}
+
+.nav-buttons button {
+  pointer-events: all;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
