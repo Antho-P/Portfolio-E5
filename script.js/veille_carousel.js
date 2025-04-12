@@ -1,12 +1,10 @@
 const sites = [
-  { title: 'Site 1', img: 'https://via.placeholder.com/150', link: '#' },
+  { title: 'Site 1', src: './assets/', link: '#' },
   { title: 'Site 2', img: 'https://via.placeholder.com/150', link: '#' },
   { title: 'Site 3', img: 'https://via.placeholder.com/150', link: '#' },
   { title: 'Site 4', img: 'https://via.placeholder.com/150', link: '#' },
   { title: 'Site 5', img: 'https://via.placeholder.com/150', link: '#' },
 ];
-
-const carousel = document.getElementById("veille-carousel");
 
 let currentIndex = 0;
 
@@ -54,6 +52,3 @@ document.getElementById("next-btn").addEventListener("click", () => {
 });
 
 renderCards();
-
-
-
