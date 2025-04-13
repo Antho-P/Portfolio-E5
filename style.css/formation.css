@@ -18,7 +18,7 @@
     max-height: auto; 
     perspective: 800px;
     border-radius: 20px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .flip-box-front img {
@@ -40,7 +40,7 @@
 }
 
 .flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) scale(0.9);
 }
 
 /* Faces avant et arrière */
@@ -54,6 +54,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    border-radius: 20px;
 }
 
 .flip-box-front {

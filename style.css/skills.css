@@ -121,10 +121,6 @@
 
 /* RESPONSIVE / Ajuste l'espacement sur mobile */
 @media screen and (max-width: 768px) {
-    .banner-content img {
-        width: 80px;
-        margin-right: 15px; 
-    }
     .certificates {
         width: 100%;
         max-width: none;
