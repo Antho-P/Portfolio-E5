@@ -1,9 +1,8 @@
 const sites = [
-  { title: 'Site 1', src: './assets/', link: '#' },
-  { title: 'Site 2', img: 'https://via.placeholder.com/150', link: '#' },
-  { title: 'Site 3', img: 'https://via.placeholder.com/150', link: '#' },
-  { title: 'Site 4', img: 'https://via.placeholder.com/150', link: '#' },
-  { title: 'Site 5', img: 'https://via.placeholder.com/150', link: '#' },
+  { title: 'ANSSI Cert-Fr', img: './assets/images/logo/certfr.png', link: 'https://www.cert.ssi.gouv.fr/' },
+  { title: 'Bleeping Computer', img: './assets/images/logo/bleeping_computer.png', link: 'https://www.bleepingcomputer.com' },
+  { title: 'Zataz', img: './assets/images/logo/zataz.png', link: 'https://www.zataz.com/' },
+  { title: 'IT Connect', img: './assets/images/logo/it-connect.png', link: 'https://www.it-connect.fr/actualites/actu-securite/' },
 ];
 
 let currentIndex = 0;
@@ -28,7 +27,7 @@ function renderCards() {
 
     const inner = document.createElement("div");
     inner.className = "card-inner";
-    inner.innerHTML = `<img src="${site.img}" alt="${site.title}" /><p>${site.title}</p>`;
+    inner.innerHTML = `<img src="${site.img}" alt="${site.title}" /><h5>${site.title}</h5>`;
     card.appendChild(inner);
 
     const link = document.createElement("div");

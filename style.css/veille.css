@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin: 40px 0;
   overflow: hidden;
   width: 100%;
@@ -13,12 +13,11 @@
 
 #veille-carousel {
   display: flex;
-  gap: 40px;
+  gap: 10%;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 900px;
-  transition: transform 0.5s ease-in-out;
+  max-width: 1000px;
 }
 
 .card-wrapper {
@@ -30,18 +29,18 @@
 
 .card {
   width: 100%;
-  height: 300px;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease;
+  height: 315px;
+  transition: transform 0.8s ease;
+  border-color: #000000;
 }
 
 .card-main:hover {
-  transform: rotateY(180deg);
+  transform: scale(1.1);
+  cursor: zoom-in;
 }
 
 .card-inner {
-  width: 100%;
+  width: 110%;
   height: 100%;
   background: linear-gradient(135deg, #eee, #ccc);
   border-radius: 15px;
@@ -49,9 +48,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  backface-visibility: hidden;
-  transform: rotateY(0deg);
-  padding: 20px;
 }
 
 .card-main .card-inner {
@@ -66,12 +62,12 @@
 }
 
 .incl-left {
-  transform: rotateY(25deg);
-  opacity: 0.7;
+  transform: rotateY(40deg);
+  opacity: 0.5;
 }
 .incl-right {
-  transform: rotateY(-25deg);
-  opacity: 0.7;
+  transform: rotateY(-40deg);
+  opacity: 0.5;
 }
 
 .card-link {
@@ -79,8 +75,8 @@
 }
 
 .card-link a {
-  text-decoration: none;
-  color: #0077cc;
+  text-decoration: underline;
+  color: #0000EE;
   font-weight: bold;
 }
 
