@@ -176,7 +176,7 @@ nav .logo h1 .blue-letter {
 /* Style des sections */
 .section {
     padding-bottom: 20px;
-    height: 100%; /* Chaque section prendra 200% de la hauteur de la fenêtre */
+    height: 100%; 
     max-height: 100%;
     background-color: #ffffff; 
     color: #333;
@@ -235,8 +235,6 @@ nav .logo h1 .blue-letter {
 
 
 /*Section Mon Portfolio*/
-
-/* Overlay avec boutons */
 .overlay {
     position: absolute;
     top: 0;

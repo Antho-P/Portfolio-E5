@@ -1,5 +1,49 @@
 /* Section Projet Pro */
+.image-pro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2%; 
+    margin: 1% auto;
+    padding: 1%;
+    max-width: 100%;
+  }
+  
+  .image-pro img {
+    height: 300px; 
+    width: auto;  
+    object-fit: contain;
+    background-color: rgb(150, 150, 150);
+    padding: 0.5px;
+    border-radius: 12px;
+    margin: 1% 0;
+    box-shadow: 0 -3px 12px #fff, 0 0 2px #9feaff, 0 0 5px #470047, 0 0 10px #00eaff,
+    0 0 15px #00eaff, 0 0 20px #00eaff, 0 0 25px #00eaff;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-pro img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 -3px 20px #bdbdbd, 0 0 2px #9feaff, 0 0 5px #470047, 0 0 10px #00eaff,
+    0 0 15px #00eaff, 0 0 20px #00eaff, 0 0 25px #00eaff;
+    cursor: zoom-in;
+  }
+  
 
+  @media (max-width: 768px) {
+    .image-pro img {
+      max-width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .image-pro img {
+      max-width: 90%;
+    }
+  }
+
+  
 /* Section Contact */
 .contact-banner {
     background-color: #363939; 
@@ -56,6 +100,7 @@
 .social-icons a img:hover {
     transform: scale(1.3);
 }
+
 
 /* RESPONSIVE / Ajuste l'espacement sur mobile */
 @media screen and (max-width: 768px) {
