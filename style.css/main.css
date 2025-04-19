@@ -183,8 +183,12 @@ nav .logo h1 .blue-letter {
 }
 
 .section:nth-child(even) {
-    background-color: #f2f2f2; /* Alterner les couleurs des sections */
+    background-color: #ececec; /* Alterner les couleurs des sections */
 }
+
+.section:last-of-type {
+    background-color: #ececec;
+  }  
 
 .section h2{
     font-size: 36px;

@@ -47,7 +47,7 @@
 /* Section Contact */
 .contact-banner {
     background-color: #363939; 
-    color: #ffffff;
+    color: #e5e5e5;
     text-align: justify ;
     display: flex;
     flex-direction: column;
@@ -55,8 +55,7 @@
     border-radius: 20px;
     width: 50%;
     max-width: 100%;
-    margin: auto;
-    margin-top: 1%; 
+    margin: auto; 
     margin-bottom: 20px;
 }
 

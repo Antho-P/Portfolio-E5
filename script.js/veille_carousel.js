@@ -1,8 +1,10 @@
 const sites = [
   { title: 'ANSSI Cert-Fr', img: './assets/images/logo/certfr.png', link: 'https://www.cert.ssi.gouv.fr/' },
-  { title: 'Bleeping Computer', img: './assets/images/logo/bleeping_computer.png', link: 'https://www.bleepingcomputer.com' },
-  { title: 'Zataz', img: './assets/images/logo/zataz.png', link: 'https://www.zataz.com/' },
   { title: 'IT Connect', img: './assets/images/logo/it-connect.png', link: 'https://www.it-connect.fr/actualites/actu-securite/' },
+  { title: 'Bleeping Computer', img: './assets/images/logo/bleeping_computer.png', link: 'https://www.bleepingcomputer.com' },
+  { title: 'Linkedin', img: './assets/images/logo/linkedin.png', link: 'https://www.linkedin.com/company/anssi-fr/posts/?feedView=all' },
+  { title: 'X - SaxX', img: './assets/images/logo/x.png', link: 'https://x.com/_saxx_/' },
+  { title: 'Zataz', img: './assets/images/logo/zataz.png', link: 'https://www.zataz.com/' },
 ];
 
 let currentIndex = 0;
