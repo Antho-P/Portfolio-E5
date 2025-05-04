@@ -237,6 +237,75 @@ nav .logo h1 .blue-letter {
     margin-left: 20px;
 }
 
+/* Menu du portfolio */
+.cardcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 40px;
+    width: 90%;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 1%; 
+    margin-bottom: 1%;
+}
+
+/* Alignement des boutons */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Conteneur des certificats */
+.cardportfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+/* Style des cartes certificats */
+.cardportfolio-card {
+    position: relative;
+    flex: 1 1 calc(33.333% - 20px);
+    width: 100%;
+    max-width: 800px;
+    min-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: whitesmoke;
+}
+
+/* Style des images des certificats */
+.cardportfolio-card img {
+    width: 100%;
+    height: auto;
+    transition: 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.cardportfolio-card:hover img {
+    filter: blur(3px) brightness(70%);
+}
+
+
+.cardportfolio-card:hover .overlay {
+    opacity: 1;
+}
+
+/* RESPONSIVE / Ajuste l'espacement sur mobile */
+@media screen and (max-width: 768px) {
+    .cardportfolio {
+        width: 100%;
+        max-width: none;
+    }
+}
 
 /*Section Mon Portfolio*/
 .overlay {
