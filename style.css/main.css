@@ -290,7 +290,7 @@ nav .logo h1 .blue-letter {
 
 /* Effet au survol */
 .cardportfolio-card:hover img {
-    filter: blur(3px) brightness(70%);
+    filter: blur(1px) brightness(90%);
 }
 
 
@@ -365,7 +365,7 @@ nav .logo h1 .blue-letter {
 }
 
 .portfolio-table:hover img {
-    filter: blur(3px) brightness(70%);
+    filter: blur(1px) brightness(90%);
 }
 
 .portfolio-table:hover .overlay {
@@ -401,7 +401,7 @@ nav .logo h1 .blue-letter {
 }
 
 .portfolio-card:hover img {
-    filter: blur(3px) brightness(70%);
+    filter: blur(1px) brightness(90%);
 }
 
 .portfolio-card:hover .overlay {

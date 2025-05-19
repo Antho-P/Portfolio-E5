@@ -110,7 +110,7 @@
 
 /* Effet au survol */
 .certificates-card:hover img {
-    filter: blur(3px) brightness(70%);
+    filter: blur(1px) brightness(90%);
 }
 
 /* Overlay avec boutons */
