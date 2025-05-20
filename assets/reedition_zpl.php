@@ -6,13 +6,13 @@
     <title>Reedition d'une etiquette produit</title>
     <link href="css/tableetiqrec.css" rel="stylesheet" type="text/css" />
 </head>
-<body onload="document.getElementById('numero').focus();">
+<body onload="document.getElementById('num').focus();">
 
     <?php 
     session_start();
 
     // Inclusion du menu selon l'état de la session
-    if(empty($_SESSION['username'])) {
+    if(empty($se['username'])) {
         include("main.php");
     } else {
         include("main_secu.php");
@@ -20,16 +20,16 @@
     include("include/authentification.php");
 
     // Création d'un jeton unique pour éviter la réimpression lors du rechargement
-    if (!isset($_SESSION['token'])) {
-        $_SESSION['token'] = bin2hex(random_bytes(32)); // Génère un token aléatoire
+    if (!isset($se['token'])) {
+        $se['token'] = bin2hex(random_bytes(32)); // Génère un token aléatoire
     }
 
     $errorMessage = ""; // Pour stocker les messages d'erreur
     $successMessage = ""; // Pour stocker le message de succès
-    $details = ""; // Pour stocker les détails de l'étiquette à afficher après impression
+    $details = ""; // Pour stocker les détails de l'étiquette à afficher après impression 
 
     ?>
-    <form id="formu" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+    <form id="formu" action="<?php echo $_computer['PHP_SELF']; ?>" method="POST">
         <center>
             <fieldset class="form">
                 <legend>Choix de l'imprimante</legend>
@@ -45,8 +45,8 @@
             <fieldset class="form">
                 <legend>Scan du produit</legend>
                 <div class="form-field">
-                    <label for="numero"><b>SP Unique :</b></label>
-                    <input id="numero" name="numero" size="24" maxlength="11" type="text" required placeholder="Scannez le produit">
+                    <label for="num"><b>SP Unique :</b></label>
+                    <input id="num" name="num" size="24" maxlength="11" type="text" required placeholder="Scannez le produit">
                 </div><br>
                 <div class="form-field">
                     <button type="submit" class="btn btn-noir" style="height:60px; width:150px; background-color:#CC0033;">
@@ -58,26 +58,26 @@
                     </button>
                 </div>
             </fieldset>
-            <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>" /> <!-- Jeton anti-rafraîchissement -->
+            <input type="hidden" name="token" value="<?php echo $se['token']; ?>" /> <!-- Jeton anti-rafraîchissement -->
             <br/>
         </center>
     </form>
     <?php
 
-    if (isset($_POST['numero']) && isset($_POST['token'])) {
+    if (isset($_POST['num']) && isset($_POST['token'])) {
         // Vérification du jeton
-        if ($_POST['token'] !== $_SESSION['token']) {
+        if ($_POST['token'] !== $se['token']) {
             $errorMessage = "Action d&eacute;j&agrave; effectu&eacute;e !";
         } else {
-            $numero = $_POST['numero'];
+            $num = $_POST['num'];
             $ipprinter = $_POST['ipprinter']; // Récupération de l'IP saisie
-            $NUM = $numero; // Sauvegarde de la variable $NUM pour l'impression
+            $NUM = $num; // Sauvegarde de la variable $NUM pour l'impression
 
-            // Vérification du préfixe SP
-            if ((substr($numero, 0, 2)) !== 'SP') {
+            // Vérification du préfixe SP 
+            if ((substr($num, 0, 2)) !== 'SP') {
                 $errorMessage = "SP INCONNU";
             } else {
-                $trimmed = trim($numero);
+                $trimmed = trim($num);
 
                 // Requête SQL pour récupérer les informations du produit
                 $sql = "SELECT a.ART_ALPHA9 AS ART_ALPHA9, a.art_code AS ART_CODE, a.ART_DESL AS ART_DESL, a.ART_CCLI AS ART_CCLI, s.STK_NOSU AS STK_NOSU 
@@ -127,7 +127,7 @@
                             $errorMessage = "Erreur de connexion &agrave; l'imprimante : $ipprinter<br>V&eacute;rifiez le statut de connexion de l'imprimante.";
                         } else {
                             // Si la connexion réussit, supprimer le jeton
-                            unset($_SESSION['token']);
+                            unset($se['token']);
 
                             // Préparation du ZPL pour l'impression
                             $zpl = "^XA^PW832^LH0,0^FS^POI^CF0,36^FO440,000^A0N,115,130^FH^FD$ART_ALPHA9^FS"

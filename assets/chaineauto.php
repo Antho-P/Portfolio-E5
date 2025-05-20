@@ -1,7 +1,7 @@
 <?php 
 
 
-session_start();
+session_stARTI();
 
 if(empty($_SESSION['user']) )
   include("main.php");
@@ -33,13 +33,13 @@ $ipprinter = '10.28.X.X' ; /*Remplacez par l'adresse IP de l'imprimante */
 
      <script>
       // Fonction pour soumettre le formulaire lors du clic sur l'image d'impression
-      function submitForm(sp, art_alpha9, art_code, art_desl, art_ccli, num) {
+      function submitForm(sp, ARTI_alpha9, ARTI_code, ARTI_desl, ARTI_ccli, num) {
           let form = document.createElement('form');
           form.method = 'POST';
           form.action = '';
 
           // Ajout des champs cachés au formulaire
-          const fields = { SP: sp, ART_ALPHA9: art_alpha9, ART_CODE: art_code, ART_DESL: art_desl, ART_CCLI: art_ccli, NUM: num };
+          const fields = { SP: sp, ARTI_ALPHA9: ARTI_alpha9, ARTI_CODE: ARTI_code, ARTI_DESL: ARTI_desl, ARTI_CCLI: ARTI_ccli, NUM: num };
           for (let key in fields) {
               let input = document.createElement('input');
               input.type = 'hidden';
@@ -82,11 +82,12 @@ if( $conn ) {
 }
 
 // Requête pour récupérer les derniers produits en stock
-$sql = "SELECT top 5 m.MVT_CRDA,m.MVT_CRHE,m.ART_CODE,m.STK_NOSU,a.ART_DESL, a.ART_ALPHA9, a.ART_CCLI
-        FROM MVT_DAT m 
-        INNER JOIN ART_PAR a ON a.ART_CODE=m.ART_CODE 
-        WHERE m.TMV_CODE='10010' AND m.STK_LIEU='RECPA01' 
-        ORDER BY m.MVT_CRDA DESC;" ; 
+$sql = "SELECT top 5 m.MVTS_CRDA,m.MVTS_CRHE,m.ARTI_CODE,m.STKS_NOSU,a.ARTI_DESL, a.ARTI_ALPHA9, a.ARTI_CCLI
+        FROM MVTSS m 
+        INNER JOIN ARTI_PAR a ON a.ARTI_CODE=m.ARTI_CODE 
+        WHERE m.TMV_CODE='10010' AND m.STKS_LIEU='RECPA01' 
+        ORDER BY m.MVTS_CRDA DESC;" ; 
+
 
 
 $stmt = sqlsrv_query( $conn, $sql );
@@ -111,11 +112,11 @@ while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_BOTH) ) {
     $PSID = $row['2'];
     $SP = $row['3'];
     $DESI = $row['4'];
-    $ART_ALPHA9 = $row['5'];
-    $ART_CCLI = $row['6'];
+    $ARTI_ALPHA9 = $row['5'];
+    $ARTI_CCLI = $row['6'];
     
     // Requête pour récupérer le jour de l'année par rapport à la date d'entrée en stock
-    $sql1 = "SELECT MAX(DATENAME(y, MVT_CRDA)) AS NUM FROM MVT_DAT WHERE STK_NoSU = '".$SP."' AND TMV_CODE IN ('10010', '10030')";
+    $sql1 = "SELECT MAX(DATENAME(y, MVTS_CRDA)) AS NUM FROM MVTSS WHERE STKS_NoSU = '".$SP."' AND TMV_CODE IN ('10010', '10030')";
     $stmt1 = sqlsrv_query($conn, $sql1);
     if ($stmt1 === false) {
         die(print_r(sqlsrv_errors(), true));
@@ -132,7 +133,7 @@ echo( "<tr>
 <td><div align=\"center\">".$DESI."</div></td>
 <!-- Ajout de l'image d'impression avec événement onClick -->
 <td><div align=\"center\">
-<img src='/images/printer.png' class='printer-img' style='cursor: pointer;' onclick=\"submitForm('$SP', '$ART_ALPHA9', '$PSID', '$DESI', '$ART_CCLI', '$NUM')\" alt='Imprimer'>
+<img src='/images/printer.png' class='printer-img' style='cursor: pointer;' onclick=\"submitForm('$SP', '$ARTI_ALPHA9', '$PSID', '$DESI', '$ARTI_CCLI', '$NUM')\" alt='Imprimer'>
 </div></td>
 
 </tr>" );
@@ -141,10 +142,10 @@ echo( "<tr>
 echo( "</table>\n" );
 if (isset($_POST['SP'])) {
     $SP = $_POST['SP'];
-    $ART_ALPHA9 = $_POST['ART_ALPHA9'];
-    $ART_CODE = $_POST['ART_CODE'];
-    $ART_DESL = $_POST['ART_DESL'];
-    $ART_CCLI = $_POST['ART_CCLI'];
+    $ARTI_ALPHA9 = $_POST['ARTI_ALPHA9'];
+    $ARTI_CODE = $_POST['ARTI_CODE'];
+    $ARTI_DESL = $_POST['ARTI_DESL'];
+    $ARTI_CCLI = $_POST['ARTI_CCLI'];
     $NUM = $_POST['NUM'];
 
     // Détails pour l'impression
@@ -156,6 +157,7 @@ if (isset($_POST['SP'])) {
     if (!$sock) {
         die("Erreur : Impossible de creer le socket");
     }
+
 
     // Ouverture du socket vers l'imprimante
     if (!socket_connect($sock, $printer_ip, $port)) {
@@ -171,10 +173,10 @@ if (isset($_POST['SP'])) {
     "^LH0,0^FS".
     "^POI".
     "^CF0,36".
-    "^FO440,000^A0N,115,130^FH^FD$ART_ALPHA9^FS".
-    "^FO410,100^ADN,18,10^FH^FD$ART_CODE^FS".
-    "^FO410,120^ABN,11,07^FH^FD$ART_DESL^FS".
-    "^FO720,000^A0R,60,40^FH^FD$ART_CCLI^FS".    
+    "^FO440,000^A0N,115,130^FH^FD$ARTI_ALPHA9^FS".
+    "^FO410,100^ADN,18,10^FH^FD$ARTI_CODE^FS".
+    "^FO410,120^ABN,11,07^FH^FD$ARTI_DESL^FS".
+    "^FO720,000^A0R,60,40^FH^FD$ARTI_CCLI^FS".    
     "^FO410,140".
     "^BY2".
     "^BCN,090,Y,N".
